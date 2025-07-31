@@ -47,6 +47,7 @@ const SavedJobs = () => {
           <div className="flex flex-col items-center justify-center text-orange-600">
             <ClipLoader />
             <p className="mt-2">Loading saved jobs...</p>
+            <p className="mt-2">Please wait for a while...</p>
           </div>
         ) : filteredJobs.length ? (
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

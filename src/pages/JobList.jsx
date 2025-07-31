@@ -81,6 +81,7 @@ const JobList = () => {
           <div className="text-orange-600 flex flex-col items-center justify-center mt-10">
             <ClipLoader />
             <p className="mt-2">Loading jobs...</p>
+            <p className="mt-2">Please wait for a while...</p>
           </div>
         ) : filteredJobs.length > 0 ? (
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-6">
