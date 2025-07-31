@@ -30,8 +30,10 @@ const JobDetails = () => {
 
     if (loading)
         return (
-            <div className="flex justify-center items-center min-h-screen">
+            <div className="flex justify-center flex-col gap-2 text-orange-600 items-center min-h-screen bg-orange-50">
                 <ClipLoader />
+                <p>Loading job details...</p>
+                <p>Please wait for a while...</p>
             </div>
         );
 
@@ -73,6 +75,21 @@ const JobDetails = () => {
                 <p className="text-gray-700 dark:text-gray-300 mb-2">
                     <strong>Job Type:</strong> {job.job_employment_type || "N/A"}
                 </p>
+                <div className="mb-4 flex gap-2 items-center">
+                    <strong className="block text-gray-700 dark:text-gray-300 mb-1">View Website:</strong>
+                    {job?.employer_website ? (
+                        <a
+                            href={job.employer_website}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors duration-200 text-sm font-medium"
+                        >
+                            Visit Website
+                        </a>
+                    ) : (
+                        <span className="text-gray-500 dark:text-gray-400">N/A</span>
+                    )}
+                </div>
 
                 {job.job_description && (
                     <div className="prose dark:prose-invert mt-6 whitespace-pre-line text-gray-800 dark:text-gray-300">

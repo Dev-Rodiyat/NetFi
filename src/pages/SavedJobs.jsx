@@ -2,10 +2,10 @@ import { useState } from "react";
 import { useSavedJobs } from "../hooks/useSavedJobs";
 import JobCard from "../components/JobCard";
 import { Search, XCircle } from "lucide-react";
-import { ClipLoader } from "react-spinners"; // ← loader spinner
+import { ClipLoader } from "react-spinners";
 
 const SavedJobs = () => {
-  const { savedJobs, loading } = useSavedJobs(); // ← get loading flag
+  const { savedJobs, loading } = useSavedJobs();
   const [search, setSearch] = useState("");
   const reversedJobs = [...savedJobs].reverse();
 

@@ -6,9 +6,7 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      // background: linear-gradient('to right, #F97316, #EA580C')
-    },
+    extend: {},
   },
   plugins: [],
 }

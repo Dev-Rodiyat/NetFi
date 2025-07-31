@@ -5,8 +5,8 @@ export function useJobs() {
   const [allJobs, setAllJobs] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const totalPages = 3; // Fetch only first 3 pages to avoid hitting rate limits
-  const delay = 1500; // 1.5 seconds between requests
+  const totalPages = 3;
+  const delay = 1500;
 
   useEffect(() => {
     const fetchAllPages = async () => {
@@ -37,7 +37,6 @@ export function useJobs() {
             jobs.push(...response.data.data);
           }
 
-          // Wait before next request to avoid hitting rate limit
           if (page < totalPages) {
             await new Promise((resolve) => setTimeout(resolve, delay));
           }
