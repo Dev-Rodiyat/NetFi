@@ -15,7 +15,7 @@ const TokenSearchBar = ({ onSearch, loading }) => {
       onSubmit={handleSubmit}
       className="flex gap-2 w-full max-w-xl mx-auto relative"
     >
-      {/* Input */}
+
       <div className="group relative flex-1">
         <Search
           className={`absolute left-3 top-1/2 transform -translate-y-1/2 transition-colors duration-300 ${
@@ -39,7 +39,6 @@ const TokenSearchBar = ({ onSearch, loading }) => {
         <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl blur opacity-20 group-hover:opacity-50 group-focus-within:opacity-50 transition-opacity duration-300 pointer-events-none" />
       </div>
 
-      {/* Button */}
       <button
         type="submit"
         disabled={loading}
