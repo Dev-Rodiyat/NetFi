@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { getEtherscanStats } from "../utils/getEtherscanStats";
+import { getEtherscanStats } from "../utils/getEtherScanStats";
 
 const COINGECKO_BASE = "https://api.coingecko.com/api/v3";
 
