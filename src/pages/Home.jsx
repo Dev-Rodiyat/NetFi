@@ -70,10 +70,10 @@ const Home = () => {
           </button>
 
           <button
-            // onClick={() => navigate('/about')}
+            onClick={() => navigate('/about')}
             className="group relative bg-slate-800/50 hover:bg-slate-700/50 text-white px-10 py-4 rounded-2xl text-lg font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 cursor-pointer border border-white/10"
           >
-            <span className="relative z-10">View Demo</span>
+            <span className="relative z-10">Learn more</span>
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl blur opacity-20 group-hover:opacity-50 transition-opacity duration-300" />
           </button>
@@ -126,7 +126,7 @@ const Home = () => {
               How It Works
             </h2>
             <p className="text-slate-300 text-xl max-w-2xl mx-auto">
-              Get started with NetFi in 3 simple steps — no wallet connection required, just pure analytics power.
+              Get started with NetFi in 3 simple steps - no wallet connection required, just pure analytics power.
             </p>
           </div>
 

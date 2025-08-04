@@ -54,7 +54,7 @@ const About = () => {
     },
     {
       title: "Our Mission",
-      content: "Our mission is to make decentralized finance more transparent, accessible, and informative by providing users with actionable token analytics — without requiring technical knowledge or wallet connections.",
+      content: "Our mission is to make decentralized finance more transparent, accessible, and informative by providing users with actionable token analytics - without requiring technical knowledge or wallet connections.",
       icon: "🎯",
       gradient: "from-purple-500/20 to-pink-500/20"
     },
@@ -75,7 +75,6 @@ const About = () => {
     { name: "CoinGecko API", purpose: "Token market data & pricing", icon: "📊" },
     { name: "Dexscreener API", purpose: "Liquidity pools & trading volume", icon: "🔄" },
     { name: "EtherScan API", purpose: "On-chain transactions & verification", icon: "🔍" },
-    { name: "Alchemy / Infura", purpose: "Web3 providers for smart contract reads", icon: "🌐" }
   ];
 
   return (
@@ -151,7 +150,6 @@ const About = () => {
           ))}
         </div>
 
-        {/* Data Sources Section */}
         <section className={`transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="text-center mb-12">
             <h2 className="text-4xl font-black mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -162,7 +160,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6">
             {dataSources.map((source, index) => (
               <div
                 key={source.name}
@@ -181,7 +179,6 @@ const About = () => {
           </div>
         </section>
 
-        {/* FAQ Section */}
         <section className={`transition-all duration-1000 delay-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="text-center mb-12">
             <h2 className="text-4xl font-black mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -225,7 +222,6 @@ const About = () => {
           </div>
         </section>
 
-        {/* Call to Action */}
         <section className={`text-center py-12 transition-all duration-1000 delay-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="relative bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-cyan-600/20 backdrop-blur-sm p-12 rounded-3xl border border-white/20 max-w-4xl mx-auto">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-3xl" />

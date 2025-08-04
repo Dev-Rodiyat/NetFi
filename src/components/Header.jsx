@@ -1,20 +1,20 @@
-// Header.jsx
 import { useState, useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom"; // Add these imports
+import { useNavigate, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import MobileMenu from "./MobileMenu"; // Adjust the path as needed
+import MobileMenu from "./MobileMenu";
 
 const navLinks = [
   { label: "Home", to: "/" },
   { label: "About", to: "/about" },
   { label: "Dashboard", to: "/dashboard" },
+  { label: "History", to: "/history" },
 ];
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const navigate = useNavigate(); // Hook for navigation
-  const location = useLocation(); // Hook to get current path
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
@@ -28,8 +28,8 @@ const Header = () => {
   }, []);
 
   const handleNavClick = (to) => {
-    navigate(to); // Navigate to the route
-    setMenuOpen(false); // Close menu on mobile
+    navigate(to);
+    setMenuOpen(false);
   };
 
   const linkClasses = (to) =>
@@ -53,7 +53,7 @@ const Header = () => {
           <div className="relative group">
             <h1
               className="text-3xl font-black bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent cursor-pointer transition-all duration-300 transform group-hover:scale-105"
-              onClick={() => navigate("/")} // Navigate to home on logo click
+              onClick={() => navigate("/")}
             >
               NetFi
             </h1>
@@ -105,8 +105,8 @@ const Header = () => {
         <MobileMenu
           closeMenu={toggleMenu}
           navLinks={navLinks}
-          currentPath={location.pathname} // Pass current path
-          setCurrentPath={(to) => navigate(to)} // Pass navigate function
+          currentPath={location.pathname}
+          setCurrentPath={(to) => navigate(to)}
         />
       </div>
 
