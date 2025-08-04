@@ -3,9 +3,8 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
 import NotFound from './pages/NotFound';
-import JobList from './pages/JobList';
-import SavedJobs from './pages/SavedJobs';
-import JobDetails from './pages/JobDetails';
+import History from './pages/History';
+import Dashboard from './pages/Dashboard';
 
 export default function App() {
   return (
@@ -14,9 +13,8 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/jobs" element={<JobList />} />
-          <Route path="/job/:id" element={<JobDetails />} />
-          <Route path="/saved" element={<SavedJobs />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/history" element={<History />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
